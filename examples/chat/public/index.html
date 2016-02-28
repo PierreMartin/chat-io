@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Socket.IO Chat Example</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <ul class="pages">
+            <!-- ZONE DE MESSAGE -->
+            <li class="chat page">
+                <div class="chatArea">
+                    <ul class="messages">
+                        <!-- Futur li de nos messages tchat -->
+                    </ul>
+                </div>
+                <input class="inputMessage" placeholder="Votre message..."/>
+            </li>
+
+            <!--  LOGIN -->
+            <li class="login page">
+                <div class="form">
+                    <h3 class="title">Register</h3>
+                    <form action="/" method="post" enctype="multipart/form-data">
+                        <input class="usernameInput" type="text" maxlength="14" placeholder="Nom"/>
+                        <input class="avatarInput" type="file" name="avatar"/>
+
+                        <br>
+                        <div class="sendContainer">
+                            <button type="submit" onclick="sendFormCreateLogin(event)">Envoyer</button>
+                        </div>
+                    </form>
+                </div>
+            </li>
+        </ul>
+
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="http://localhost:8000/socket.io/socket.io.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
